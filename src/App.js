@@ -1,22 +1,21 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [valor,setValor] = useState("");
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <label>Data</label>
+        <input type="text"  value={valor} onChange={(e)=>setValor(e.target.value)}/>
+        <label>Descricao</label>
+        <input type="text"  value={valor} onChange={(e)=>setValor(e.target.value)}/>
+        <label>Valor</label>
+        <input type="number"  value={valor} onChange={(e)=>setValor(e.target.value)}/>
+
+        <button>Salvar</button>
       </header>
     </div>
   );
